@@ -1,5 +1,5 @@
 import React from "react";
-import { Categories, CategoriesMobile, Nav, Slider } from "../ui";
+import { Categories, CategoriesMobile, Nav } from "../ui";
 import ChatHelp from "../ui/buttons/chat";
 const Navbar = () => {
 
@@ -7,7 +7,6 @@ const Navbar = () => {
     <div>
       <Nav/>
       <Categories/>
-      <Slider />
       <CategoriesMobile />
       <ChatHelp/>
     </div>

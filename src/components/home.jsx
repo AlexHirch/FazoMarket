@@ -4,11 +4,13 @@ import {
   PopularCategories,
   ProductCheaperCart,
   ProductMiniCart,
+  Slider,
 } from "../ui";
 
 const Home = () => {
   return (
     <div>
+      <Slider />
       <div className="Hot-Deals">
         <div className="texttt">
           <h4>Горящие предложения:</h4>

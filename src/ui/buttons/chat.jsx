@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Admin } from "../../resource";
 
 const ChatHelp = () => {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
   return (
     <div className="chatA">
         <div onClick={() => setVisible(!visible)} className={visible ? "close active" : "close"}></div>

@@ -2,6 +2,11 @@ $color: #ed3729;
 $border: rgb(219, 219, 219);
 $text: #202020;
 
+.App {
+  min-height: 100vh;
+  position: relative;
+}
+
 * {
   font-family: Arial, Helvetica, sans-serif;
   transition: all 0.2s;
@@ -164,7 +169,7 @@ $text: #202020;
     border-color: white;
     border: none;
     height: 0px;
-    padding: 20px 50px;
+    padding: 0px 50px;
     overflow: hidden;
   }
   .categoriesMenu {
@@ -196,22 +201,25 @@ $text: #202020;
           padding: 10px;
           overflow: hidden;
           li {
-            display: flex;
-            justify-content: space-between;
-            color: $text;
-            font-size: 16px;
-            padding: 8px;
-            border-radius: 10px;
-            span {
+            width: 100%;
+            a {
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              color: $text;
+              font-size: 16px;
+              padding: 8px;
+              border-radius: 10px;
+              font-size: 16px;
+              color: $text;
               i {
-                text-align: center;
                 width: 30px;
                 font-size: 14px;
               }
-            }
-            &:hover {
-              background-color: #ececec;
-            }
+              &:hover {
+                background-color: #ececec;
+              }
+              }
           }
         }
         .cMenu-3 {
@@ -222,19 +230,16 @@ $text: #202020;
           padding: 20px;
           overflow: hidden;
           li {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            color: $text;
-            font-size: 16px;
-            padding: 10px;
-            border-radius: 10px;
-            span {
-              i {
-                text-align: center;
-                width: 30px;
-                font-size: 14px;
-              }
+            a {
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              color: $text;
+              font-size: 16px;
+              padding: 10px;
+              border-radius: 10px;
+              color: $text;
+              font-size: 16px;
             }
             &:hover {
               background-color: #ececec;
@@ -632,6 +637,8 @@ $text: #202020;
     }
   }
   footer {
+    position: relative;
+    bottom: 0px;
     background-color: #202020;
     color: rgb(182, 181, 181);
     display: flex;
@@ -725,12 +732,12 @@ $text: #202020;
       font-size: 20px;
       border: 2px solid $color;
       z-index: 3;
-      .active{
+      .active {
         border-color: white;
       }
     }
-    
-    .close{
+
+    .close {
       display: none;
       position: fixed;
       background-color: #000000ac;
@@ -739,12 +746,12 @@ $text: #202020;
       top: 0;
       left: 0;
       z-index: 0;
-      &.active{
+      &.active {
         display: block;
       }
     }
-    .ChatHelp{
-      transition: all .3s;
+    .ChatHelp {
+      transition: all 0.3s;
       overflow-x: hidden;
       overflow-y: scroll;
       display: block;
@@ -757,7 +764,7 @@ $text: #202020;
       box-shadow: 0 0 20px black;
       width: 50px;
       height: 50px;
-      form{
+      form {
         position: fixed;
         bottom: 22px;
         width: 230px;
@@ -765,7 +772,7 @@ $text: #202020;
         justify-content: space-between;
         padding: 5px;
         z-index: 2;
-        input{
+        input {
           border-radius: 40px;
           border: 2px;
           border-color: $color;
@@ -774,24 +781,24 @@ $text: #202020;
           width: 78%;
           outline: none;
           color: black;
-          &:focus{
+          &:focus {
             background-color: #ffe2e2;
           }
         }
-        button{
+        button {
           width: 40px;
           height: 40px;
         }
       }
     }
-    .ChatHelp.active{
+    .ChatHelp.active {
       display: block;
       top: -350px;
       right: 60px;
       width: 250px;
       height: 400px;
     }
-    .chatWindow{
+    .chatWindow {
       background-color: white;
       position: absolute;
       width: 100%;
@@ -799,7 +806,7 @@ $text: #202020;
       height: auto;
       padding: 10px;
       z-index: 2;
-      h4{
+      h4 {
         position: relative;
         display: flex;
         flex-wrap: wrap;
@@ -811,7 +818,7 @@ $text: #202020;
         font-size: 20px;
         color: white;
         background-color: $color;
-        p{
+        p {
           color: #3300ff;
           width: auto;
           margin: 10px 10px 0 0;
@@ -820,17 +827,17 @@ $text: #202020;
           font-size: 12px;
           background-color: transparent;
         }
-        div{
+        div {
           overflow: hidden;
           width: 60px;
           height: 60px;
           border-radius: 40px;
-          img{
+          img {
             height: 100%;
           }
         }
       }
-      p{
+      p {
         margin: 5px 0;
         width: 80%;
         font-size: 12px;
@@ -838,12 +845,21 @@ $text: #202020;
         border-radius: 20px;
         padding: 10px;
         color: white;
-        &.chatMe{
+        &.chatMe {
           margin-left: 20%;
           background-color: #e26e6e;
           color: white;
         }
       }
+    }
+  }
+  .ProductFilter{
+    padding: 20px 50px;
+    .Filter{
+      border-radius: 10px;
+      min-height: 100vh;
+      border: 1px solid $border;
+      width: 300px;
     }
   }
 }

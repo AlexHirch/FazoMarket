@@ -1,18 +1,19 @@
-import CategoriesMobile from "../ui/categoriesMobile";
-import PopularCategories from "../ui/popularCategories";
-import ProductCheaperCart from "../ui/product-cheaper-cart";
-import ProductMiniCart from "../ui/product-mini-cart";
-import Slider from "../ui/slider";
+import {
+  OneProduct,
+  PopularCategories,
+  ProductCheaperCart,
+  ProductMiniCart,
+} from "../ui";
 
 const Home = () => {
   return (
     <div>
-      <Slider />
-      <CategoriesMobile />
       <div className="Hot-Deals">
         <div className="texttt">
           <h4>Горящие предложения:</h4>
-          <a href="#">Посмотреть все<i className="fa-solid fa-arrow-right"></i></a>
+          <a href="#">
+            Посмотреть все<i className="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
         <ProductMiniCart />
         <ProductMiniCart />
@@ -25,11 +26,14 @@ const Home = () => {
         <ProductMiniCart />
         <ProductMiniCart />
       </div>
-      <PopularCategories/>
+      <PopularCategories />
+      <OneProduct />
       <div className="Cheaper-Deals">
         <div className="texttt">
           <h4>Товары дешевле:</h4>
-          <a href="#">Посмотреть все<i className="fa-solid fa-arrow-right"></i></a>
+          <a href="#">
+            Посмотреть все<i className="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
         <ProductCheaperCart />
         <ProductCheaperCart />
@@ -41,6 +45,31 @@ const Home = () => {
         <ProductCheaperCart />
         <ProductCheaperCart />
         <ProductCheaperCart />
+      </div>
+      <div className="recomendet">
+        <div className="texttt">
+          <h4>Рекомендуем</h4>
+          <a href="#">
+            Посмотреть все<i className="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+        <div className="discount">
+          <h1>%</h1>
+          <p>Ликвидация</p>
+          <h2>
+            до <span>45%</span>
+          </h2>
+        </div>
+        <div className="Cheaper-Deals1">
+          <ProductCheaperCart />
+          <ProductCheaperCart />
+          <ProductCheaperCart />
+          <ProductCheaperCart />
+          <ProductCheaperCart />
+          <ProductCheaperCart />
+          <ProductCheaperCart />
+          <ProductCheaperCart />
+        </div>
       </div>
     </div>
   );

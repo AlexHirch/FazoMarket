@@ -1,9 +1,9 @@
 import React from "react";
-import { Iphone } from "../resource";
+import { Iphone } from "../../resource";
 
 const ProductCheaperCart = () => {
   return (
-    <div className="ProductMiniCart">
+    <div className="ProductCheaperCart">
       <div className="img">
         <img src={Iphone} alt="" />
       </div>

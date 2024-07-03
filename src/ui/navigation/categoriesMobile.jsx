@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { logo1 } from "../resource";
+import { logo1 } from "../../resource";
 
 const CategoriesMobile = () => {
   const [visible, setVisible] = useState(false);

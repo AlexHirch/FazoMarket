@@ -1,15 +1,13 @@
-import React, { useState } from "react";
-import { Logo } from "../resource";
-import { CiSearch } from "react-icons/ci";
-import { PiMicrophoneLight, PiScalesThin } from "react-icons/pi";
-import { Categories, Nav } from "../ui";
-
+import React from "react";
+import { Categories, CategoriesMobile, Nav, Slider } from "../ui";
 const Navbar = () => {
 
   return (
     <div>
       <Nav/>
       <Categories/>
+      <Slider />
+      <CategoriesMobile />
     </div>
   );
 };

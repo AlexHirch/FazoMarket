@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { wifi } from "../resource";
+import { wifi } from "../../resource";
 
 const Categories = () => {
   const [visible, setVisible] = useState(false)

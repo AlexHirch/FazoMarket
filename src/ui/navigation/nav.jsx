@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Logo, logo1 } from "../resource";
+import { Logo, logo1 } from "../../resource";
 
 const Nav = () => {
   const [selectedValue, setSelectedValue] = useState("Все категории");

@@ -9,7 +9,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { slide1, slide2 } from "../resource";
+import { slide1, slide2 } from "../../resource";
 
 const Slider = () => {
   return (
@@ -27,8 +27,6 @@ const Slider = () => {
             disableOnInteraction: false,
           }}
           pagination={{ clickable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
         >
           <SwiperSlide>
             <img src={slide1} alt="" />
@@ -56,8 +54,6 @@ const Slider = () => {
             disableOnInteraction: false,
           }}
           pagination={{ clickable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
         >
           <SwiperSlide>
             <img src={slide2} alt="" />

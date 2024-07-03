@@ -1,7 +1,7 @@
 import React from "react";
 import { A11y, Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Camera, Computer, Notebook, Phones } from "../resource";
+import { Camera, Computer, Notebook, Phones } from "../../resource";
 
 const PopularCategories = () => {
   return (
@@ -18,8 +18,6 @@ const PopularCategories = () => {
             delay: 5000,
             disableOnInteraction: false,
           }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
         >
           <SwiperSlide>
             <div className="l1">
@@ -97,8 +95,6 @@ const PopularCategories = () => {
             delay: 4000,
             disableOnInteraction: false,
           }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
         >
           <SwiperSlide>
             <div className="r1">

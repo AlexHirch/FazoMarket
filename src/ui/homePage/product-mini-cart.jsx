@@ -1,5 +1,5 @@
 import React from "react";
-import { product1 } from "../resource";
+import { product1 } from "../../resource";
 
 const ProductMiniCart = () => {
   return (

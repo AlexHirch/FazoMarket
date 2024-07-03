@@ -1,5 +1,6 @@
 import React from "react";
 import { Categories, CategoriesMobile, Nav, Slider } from "../ui";
+import ChatHelp from "../ui/buttons/chat";
 const Navbar = () => {
 
   return (
@@ -8,6 +9,7 @@ const Navbar = () => {
       <Categories/>
       <Slider />
       <CategoriesMobile />
+      <ChatHelp/>
     </div>
   );
 };

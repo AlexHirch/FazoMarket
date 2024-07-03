@@ -16,3 +16,4 @@ export { default as Brand_canon } from "./image/brands/canon.svg";
 export { default as Brand_mi } from "./image/brands/mi.svg";
 export { default as Brand_artel } from "./image/brands/artel.svg";
 export { default as Brand_lg } from "./image/brands/lg.svg";
+export { default as Admin } from "./image/Admin.jpg";

@@ -1,0 +1,977 @@
+$color: #ed3729;
+$border: rgb(219, 219, 219);
+$text: #202020;
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  transition: all 0.2s;
+  list-style: none;
+  text-decoration: none;
+}
+
+.navbar {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  .FazoLogo {
+    width: auto;
+    height: 40px;
+    img {
+      height: 100%;
+    }
+  }
+  .location {
+    display: none;
+  }
+  .navSearcr {
+    width: auto;
+    height: 40px;
+    form {
+      border-radius: 10px;
+      border: 1px solid $color;
+      width: auto;
+      height: 100%;
+      background-color: white;
+      overflow: hidden;
+      span {
+        overflow: hidden;
+        select {
+          border: none;
+          width: 130px;
+          height: 100%;
+          outline: none;
+          padding-left: 10px;
+          border-right: 1px solid $color;
+          color: rgb(0, 0, 0);
+        }
+        input {
+          width: 300px;
+          padding: 0 10px;
+          border: none;
+          outline: none;
+          font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+        i {
+          padding: 0 5px;
+          color: grey;
+          &:hover {
+            color: $color;
+          }
+        }
+      }
+
+      button {
+        width: 80px;
+        height: 102%;
+        border: none;
+        background-color: $color;
+        color: white;
+        &:hover {
+          opacity: 0.9;
+        }
+        &:active {
+          background-color: white;
+          color: grey;
+        }
+      }
+    }
+  }
+  .buttonBox {
+    width: 300px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    button {
+      width: 70px;
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+      background-color: transparent;
+      border: none;
+      color: black;
+      &:hover {
+        color: $color;
+      }
+      i {
+        font-size: 20px;
+      }
+      span {
+        position: absolute;
+        background-color: $color;
+        width: 20px;
+        height: 20px;
+        top: 0;
+        right: 0;
+        color: white;
+        border-radius: 20px;
+        padding: 3px;
+        font-size: 12px;
+      }
+    }
+  }
+}
+.navMedia {
+  display: none;
+  transition: all 0.5s;
+}
+
+.categories {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  padding: 5px 50px;
+  button {
+    background-color: $color;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 220px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+  ul {
+    padding-left: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    height: 100%;
+    a {
+      font-size: 15px;
+      color: black;
+      &.active {
+        color: $color;
+      }
+      &:hover {
+        text-shadow: 0 0 5px rgba(255, 0, 0, 0.497);
+        color: $color;
+      }
+    }
+  }
+}
+.categoriesMenu.visible {
+  position: absolute;
+  border-color: white;
+  border: none;
+  height: 0px;
+  padding: 20px 50px;
+  overflow: hidden;
+}
+.categoriesMenu {
+  width: 100%;
+  position: absolute;
+  user-select: none;
+  border-bottom: 1px solid $border;
+  border-top: 1px solid $border;
+  height: 500px;
+  transition: all 0.5s;
+  padding: 10px 50px;
+  overflow: hidden;
+  z-index: 2;
+  background-color: white;
+  .cMenu {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .cMenu-1 {
+      display: flex;
+      width: 55%;
+      height: 100%;
+      ul {
+        gap: 1px;
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        padding: 10px;
+        overflow: hidden;
+        li {
+          display: flex;
+          justify-content: space-between;
+          color: $text;
+          font-size: 16px;
+          padding: 8px;
+          border-radius: 10px;
+          span {
+            i {
+              text-align: center;
+              width: 30px;
+              font-size: 14px;
+            }
+          }
+          &:hover {
+            background-color: #ececec;
+          }
+        }
+      }
+      .cMenu-3 {
+        gap: 1px;
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        padding: 20px;
+        overflow: hidden;
+        li {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          color: $text;
+          font-size: 16px;
+          padding: 10px;
+          border-radius: 10px;
+          span {
+            i {
+              text-align: center;
+              width: 30px;
+              font-size: 14px;
+            }
+          }
+          &:hover {
+            background-color: #ececec;
+          }
+        }
+      }
+    }
+    .cMenu-2 {
+      display: flex;
+      align-items: center;
+      width: 45%;
+      height: 100%;
+      img {
+        width: 100%;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+.sliderMedia {
+  display: none;
+}
+
+.swiper {
+  width: 100%;
+  .swiper-slide {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.slider1{
+  .swiper{
+    padding: 29px;
+    .swiper-slide{
+      width: auto;
+      border: 1px solid $border;
+      border-radius: 10px;
+      display: flex;
+      padding: 10px;
+      .l1{
+        width: 40%;
+        height: max-content;
+        text-align: start;
+      }
+      .r1{
+        width: 60%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        img{
+          height: 160%;
+        }
+      }
+    }
+  }
+}
+
+.sliderMedia1{
+  display: none;
+}
+
+h3.hotCategories{
+  width: 100%;
+  height: auto;
+  font-size: 30px;
+  padding: 30px 20px;
+}
+
+:root {
+  --swiper-theme-color: $color !important;
+  --swiper-navigation-size: 18px !important;
+}
+
+.swiper-pagination-bullet {
+  color: #202020 !important;
+  background-color: $color !important;
+}
+
+.swiper-pagination {
+  bottom: 10px !important;
+}
+
+.swiper-button-prev {
+  background-color: #ececec;
+  padding: 20px;
+  border-radius: 20px;
+  top: 45% !important;
+  &:hover {
+    box-shadow: 0 0 10px black;
+  }
+}
+
+.swiper-slide {
+  padding: 30px;
+}
+.swiper-button-next {
+  background-color: #ececec;
+  padding: 20px;
+  border-radius: 20px;
+  top: 45% !important;
+  &:hover {
+    box-shadow: 0 0 10px black;
+  }
+}
+.CategoriesMobile {
+  display: none;
+}
+.Infobar {
+  display: flex;
+  width: 100%;
+  background-color: $color;
+  color: white;
+  justify-content: space-between;
+  p {
+    width: max-content;
+    font-size: 12px;
+    padding: 10px;
+    &:first-child {
+      padding-right: 100px;
+    }
+    &:last-child {
+      padding-left: 200px;
+    }
+  }
+}
+
+.popularCategories{
+  padding: 20px 50px;
+}
+
+.Hot-Deals {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  row-gap: 20px;
+  padding: 20px 50px;
+  .texttt {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    a {
+      font-size: 12px;
+      color: grey;
+      i {
+        padding-left: 5px;
+      }
+      &:hover {
+        color: $color;
+      }
+    }
+  }
+  .ProductMiniCart {
+    width: 240px;
+    border: 1px solid $border;
+    border-radius: 10px;
+    .img {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+      img {
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    p {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      padding: 10px 20px;
+      color: $color;
+      font-weight: 700;
+      span {
+        width: 45%;
+        padding: 0;
+        font-weight: 400;
+        font-size: 12px;
+        color: grey;
+        text-decoration: line-through;
+      }
+    }
+    h3 {
+      text-align: center;
+      padding: 0 10px;
+      font-size: 14px;
+    }
+    span {
+      padding: 10px;
+      font-size: 10px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      color: grey;
+    }
+    h4 {
+      display: flex;
+      padding: 5px;
+      justify-content: space-between;
+      span {
+        width: 23%;
+        text-align: center;
+        border: 1px solid $border;
+        border-radius: 5px;
+      }
+    }
+    .btn-group {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height: auto;
+      button {
+        background-color: transparent;
+        border: 1px solid $border;
+        font-size: 20px;
+        color: grey;
+        width: 33.3%;
+        padding: 20px;
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+        &:nth-child(2) {
+          border: 1px solid $border;
+          border-bottom: none;
+        }
+        &:hover {
+          color: $color;
+        }
+      }
+    }
+  }
+}
+
+.Cheaper-Deals {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  row-gap: 20px;
+  padding: 20px 50px;
+  .texttt {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    a {
+      font-size: 12px;
+      color: grey;
+      i {
+        padding-left: 5px;
+      }
+      &:hover {
+        color: $color;
+      }
+    }
+  }
+  .ProductMiniCart {
+    width: 240px;
+    border: 1px solid $border;
+    border-radius: 10px;
+    .img {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+      img {
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    p {
+      text-align: center;
+      width: 100%;
+      font-size: 20px;
+      padding: 10px 20px;
+      color: $color;
+      font-weight: 700;
+      span {
+        padding: 0;
+        font-weight: 400;
+        font-size: 12px;
+        color: grey;
+      }
+    }
+    h3 {
+      width: 100%;
+      text-align: center;
+      padding: 0 20px 20px 20px;
+      font-size: 14px;
+    }
+    .btn-group {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height: auto;
+      button {
+        background-color: transparent;
+        border: 1px solid $border;
+        font-size: 20px;
+        color: grey;
+        width: 33.3%;
+        padding: 20px;
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+        &:nth-child(2) {
+          border: 1px solid $border;
+          border-bottom: none;
+        }
+        &:hover {
+          color: $color;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .Infobar {
+    display: flex;
+    width: 100%;
+    background-color: $color;
+    color: white;
+    justify-content: space-between;
+    p {
+      width: max-content;
+      font-size: 12px;
+      padding: 10px;
+      &:first-child {
+        padding-right: 0px;
+      }
+      &:last-child {
+        padding-left: 0px;
+      }
+    }
+  }
+  .navbar {
+    .FazoLogo{
+      width: 200px;
+      img{
+        height: auto;
+        width: 100%;
+      }
+    }
+    .navSearcr {
+      width: 50%;
+      height: auto;
+      form {
+        width: 100%;
+        span {
+          select {
+            width: 20%;
+          }
+          input {
+            width: 60%;}
+          i {
+            display: none;
+          }
+        }
+  
+        button {
+          width: 20%;
+        }
+      }
+    }
+  }
+  
+.categories {
+  padding: 5px;
+  ul {
+    padding-left: 20px;
+    justify-content: space-evenly;
+    a {
+      color: black;
+      font-size: 10px;
+    }
+  }
+}
+.categoriesMenu{
+  padding: 0 10px;
+  .cMenu {
+    .cMenu-1 {
+      ul {
+        li {
+          font-size: 14px;
+        }
+      }
+      .cMenu-3 {
+        h2{
+          font-size: 18px;
+        }
+        li {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          color: $text;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+}
+
+@media screen and (max-width: 720px) {
+  .Infobar {
+    display: none;
+  }
+  .navbar {
+    padding: 10px 20px;
+    .FazoLogo{
+      width: 120px;
+      img{
+        height: auto;
+        width: 100%;
+      }
+    }
+    .navSearcr {
+      width: 40%;
+      form {
+        display: none;
+      }
+      .location {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        align-items: center;
+        p {
+          color: grey;
+          i {
+            padding-right: 10px;
+          }
+        }
+      }
+    }
+    .buttonBox {
+      display: none;
+    }
+  }
+  .navMedia {
+    display: flex;
+    padding: 10px 20px;
+    justify-content: space-between;
+    button {
+      width: 14%;
+      border: none;
+      padding: 10px;
+      font-size: 20px;
+      color: white;
+      background-color: $color;
+      border-radius: 10px;
+      &:active {
+        opacity: 0.9;
+      }
+    }
+    form {
+      width: 84%;
+      border: 1px solid $color;
+      border-radius: 10px;
+      transition: all 0.5;
+      overflow: hidden;
+      input {
+        width: 80%;
+        height: 100%;
+        border: none;
+        outline: none;
+        padding-left: 10px;
+        font-size: 18px;
+      }
+      button {
+        width: 20%;
+        height: 100%;
+        border-radius: 0px;
+      }
+    }
+    .navMenu {
+      overflow: hidden;
+      display: flex;
+      transition: all 0.6s;
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      z-index: 3;
+      left: 0;
+      &.active {
+        left: -140%;
+      }
+      .main {
+        position: absolute;
+        width: 85%;
+        height: 100vh;
+        background-color: white;
+        z-index: 1;
+        .close {
+          padding: 10px;
+          display: flex;
+          width: 100%;
+          height: 50px;
+          display: flex;
+          justify-content: space-between;
+          img {
+            height: 100%;
+          }
+          i {
+            font-size: 30px;
+            color: $text;
+          }
+        }
+        .buttonBox {
+          width: 100%;
+          display: flex;
+          justify-content: space-around;
+          padding: 10px 70px 10px 10px;
+          height: 60px;
+          hr {
+            border: none;
+            border-right: 1px solid rgb(189, 189, 189);
+          }
+          button {
+            align-items: center;
+            i {
+              background-color: rgba(128, 128, 128, 0.346);
+              border-radius: 40px;
+              padding: 10px;
+              margin-right: 10px;
+              font-size: 24px;
+            }
+            display: flex;
+            width: max-content;
+            background-color: transparent;
+            color: #202020;
+          }
+        }
+        ul {
+          padding: 20px;
+          li {
+            padding: 15px 10px;
+            font-size: 22px;
+            a {
+              color: #202020;
+            }
+            i {
+              text-align: center;
+              width: 50px;
+            }
+          }
+        }
+        .language {
+          width: auto;
+          padding: 10px 20px;
+          display: flex;
+          gap: 10px;
+          button {
+            width: 80px;
+            border-radius: 10px;
+            background-color: transparent;
+            color: $color;
+            border: 1px solid $color;
+            &.active {
+              color: white;
+              background-color: $color;
+            }
+          }
+        }
+        p {
+          color: $text;
+          i {
+            padding-right: 10px;
+          }
+          padding: 30px;
+          font-size: 20px;
+        }
+      }
+      .bhc {
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        width: 100%;
+        height: 110vh;
+        background-color: #2020208f;
+        filter: blur(20px);
+        z-index: 0;
+      }
+    }
+  }
+  .categories {
+    display: none;
+  }
+  .slider {
+    display: none;
+  }
+  .slider1 {
+    display: none;
+  }
+  .sliderMedia {
+    display: block;
+  }
+  .sliderMedia1 {
+    display: block;
+    .swiper{
+      padding: 100px 0 20px 0;
+      .swiper-slide{
+        width: auto;
+        border: 1px solid $border;
+        border-radius: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+        .l1{
+          padding-top: 100px;
+          width: 100%;
+          height: max-content;
+          text-align: center;
+        }
+        .r1{
+          width: 100%;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: end;
+          img{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .CategoriesMobile {
+    display: block;
+    padding: 10px 30px;
+    button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      background-color: $color;
+      color: white;
+      font-size: 22px;
+    }
+    .menuMobile {
+      transition: all 0.5s;
+      padding: 20px 30px 30px 30px;
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: white;
+      width: 100%;
+      height: 100vh;
+      z-index: 3;
+      &.active {
+        left: -120%;
+      }
+      .close {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+        color: #202020;
+        right: 10px;
+        top: 10px;
+        i {
+          font-size: 30px;
+        }
+      }
+      li {
+        display: flex;
+        justify-content: space-between;
+        color: $text;
+        font-size: 20px;
+        padding: 15px;
+        border-radius: 10px;
+        span {
+          i {
+            text-align: center;
+            width: 50px;
+            font-size: 28px;
+          }
+        }
+        &:hover {
+          background-color: #ececec;
+        }
+      }
+    }
+  }
+  h3.hotCategories{
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+    padding: 0;
+    padding-top: 20px;
+  }
+  .popularCategories{
+    padding: 10px;
+  }
+  .Hot-Deals {
+    padding: 10px;
+    .ProductMiniCart {
+      width: 290px;
+      .img {
+        height: auto;
+      }
+      p {
+        justify-content: space-evenly;
+        font-size: 20px;
+        padding: 10px;
+        font-weight: 800;
+        span {
+          width: 40%;
+        }
+      }
+      h3 {
+        padding: 0 10px;
+        font-size: 17px;
+      }
+      span {
+        padding: 10px;
+        font-size: 13px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        color: grey;
+      }
+    }
+  }
+  .Cheaper-Deals {
+    padding: 10px;
+    .ProductMiniCart {
+      width: 290px;
+      border: 1px solid $border;
+      border-radius: 10px;
+      .img {
+        height: auto;
+      }
+    }
+  }
+}

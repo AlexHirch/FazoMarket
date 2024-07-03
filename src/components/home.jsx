@@ -1,4 +1,5 @@
 import {
+  Brends,
   OneProduct,
   PopularCategories,
   ProductCheaperCart,
@@ -71,6 +72,7 @@ const Home = () => {
           <ProductCheaperCart />
         </div>
       </div>
+      <Brends/>
     </div>
   );
 };

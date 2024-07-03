@@ -385,6 +385,7 @@ $text: #202020;
         text-align: center;
         border: 1px solid $border;
         border-radius: 5px;
+        font-size: 10px;
       }
     }
     .btn-group {
@@ -1041,7 +1042,7 @@ $text: #202020;
     }
     h3 {
       padding: 0 10px;
-      font-size: 17px;
+      font-size: 14px;
     }
     span {
       padding: 10px;
@@ -1050,6 +1051,11 @@ $text: #202020;
       display: flex;
       justify-content: center;
       color: grey;
+    }
+    h4 {
+      span {
+        font-size: 8px;
+      }
     }
   }
   .Hot-Deals {

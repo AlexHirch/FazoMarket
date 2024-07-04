@@ -9,7 +9,7 @@ import {
 
 const Home = () => {
   return (
-    <div>
+    <div style={{userSelect:"none"}}>
       <Slider />
       <div className="Hot-Deals">
         <div className="texttt">

@@ -1,8 +1,8 @@
 import React from 'react'
 
-const button = ({value, color}) => {
+const button = ({value, width, color}) => {
   return (
-    <button className={color}>{value}</button>
+    <button style={{width:`${width}%`}} className={`btn-${color}`}>{value}</button>
   )
 }
 

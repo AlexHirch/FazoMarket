@@ -7,7 +7,7 @@ const ChatHelp = () => {
     <div className="chatA">
         <div onClick={() => setVisible(!visible)} className={visible ? "close active" : "close"}></div>
       <button onClick={() => setVisible(!visible)}>
-        <i class="fa-regular fa-comments"></i>
+        <i className="fa-regular fa-comments"></i>
       </button>
       <div className={visible ? "ChatHelp active" : "ChatHelp"}>
         <div className="chatWindow">
@@ -26,7 +26,7 @@ const ChatHelp = () => {
         <form>
           <input type="text" />
           <button>
-            <i class="fa-solid fa-paper-plane"></i>
+            <i className="fa-solid fa-paper-plane"></i>
           </button>
         </form>
       </div>

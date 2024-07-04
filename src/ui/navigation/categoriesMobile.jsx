@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import { logo1 } from "../../resource";
 
 const CategoriesMobile = () => {
@@ -17,74 +18,123 @@ const CategoriesMobile = () => {
         <span className="close">
           <img src={logo1} alt="" />
           <i
-            onClick={(e) => {
-              e.preventDefault();
+            onClick={() => {
               setVisible(!visible);
             }}
             className="fa-solid fa-xmark"
           ></i>
         </span>
-        <li>
+        <NavLink
+          to={"/filter"}
+          onClick={() => {
+            setVisible(!visible);
+          }}
+        >
           <span>
             <i className="fa-solid fa-mobile-screen"></i>Телефоны, планшеты
           </span>
           <i className="fa-solid fa-chevron-right"></i>
-        </li>
-        <li>
+        </NavLink>
+        <NavLink
+          to={"/filter"}
+          onClick={() => {
+            setVisible(!visible);
+          }}
+        >
           <span>
             <i className="fa-solid fa-laptop"></i>Ноутбуки
           </span>
           <i className="fa-solid fa-chevron-right"></i>
-        </li>
-        <li>
+        </NavLink>
+        <NavLink
+          to={"/filter"}
+          onClick={() => {
+            setVisible(!visible);
+          }}
+        >
           <span>
             <i className="fa-solid fa-wifi"></i>Сетевое оборудование
           </span>
           <i className="fa-solid fa-chevron-right"></i>
-        </li>
-        <li>
+        </NavLink>
+        <NavLink
+          to={"/filter"}
+          onClick={() => {
+            setVisible(!visible);
+          }}
+        >
           <span>
             <i className="fa-solid fa-video"></i>Видеонаблюдение
           </span>
           <i className="fa-solid fa-chevron-right"></i>
-        </li>
-        <li>
+        </NavLink>
+        <NavLink
+          to={"/filter"}
+          onClick={() => {
+            setVisible(!visible);
+          }}
+        >
           <span>
             <i className="fa-solid fa-computer"></i>Компьютеры
           </span>
           <i className="fa-solid fa-chevron-right"></i>
-        </li>
-        <li>
+        </NavLink>
+        <NavLink
+          to={"/filter"}
+          onClick={() => {
+            setVisible(!visible);
+          }}
+        >
           <span>
             <i className="fa-solid fa-print"></i>Техника для офиса
           </span>
           <i className="fa-solid fa-chevron-right"></i>
-        </li>
-        <li>
+        </NavLink>
+        <NavLink
+          to={"/filter"}
+          onClick={() => {
+            setVisible(!visible);
+          }}
+        >
           <span>
             <i className="fa-solid fa-headphones-simple"></i>Аксессуары
           </span>
           <i className="fa-solid fa-chevron-right"></i>
-        </li>
-        <li>
+        </NavLink>
+        <NavLink
+          to={"/filter"}
+          onClick={() => {
+            setVisible(!visible);
+          }}
+        >
           <span>
             <i className="fa-solid fa-kitchen-set"></i>Товары для дома
           </span>
           <i className="fa-solid fa-chevron-right"></i>
-        </li>
-        <li>
+        </NavLink>
+        <NavLink
+          to={"/filter"}
+          onClick={() => {
+            setVisible(!visible);
+          }}
+        >
           <span>
             <i className="fa-solid fa-computer-mouse"></i>Периферийные
             устройства
           </span>
           <i className="fa-solid fa-chevron-right"></i>
-        </li>
-        <li>
+        </NavLink>
+        <NavLink
+          to={"/filter"}
+          onClick={() => {
+            setVisible(!visible);
+          }}
+        >
           <span>
             <i className="fa-solid fa-network-wired"></i>IP Телефония
           </span>
           <i className="fa-solid fa-chevron-right"></i>
-        </li>
+        </NavLink>
       </ul>
     </div>
   );

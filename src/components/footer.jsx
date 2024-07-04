@@ -47,10 +47,10 @@ const Footer = () => {
         </ul>
       </div>
       <div className="social">
-        <span><i class="fa-brands fa-telegram"></i></span>
-        <span><i class="fa-brands fa-instagram"></i></span>
-        <span><i class="fa-brands fa-facebook-f"></i></span>
-        <span><i class="fa-brands fa-youtube"></i></span>
+        <span><i className="fa-brands fa-telegram"></i></span>
+        <span><i className="fa-brands fa-instagram"></i></span>
+        <span><i className="fa-brands fa-facebook-f"></i></span>
+        <span><i className="fa-brands fa-youtube"></i></span>
       </div>
     </footer>
   );

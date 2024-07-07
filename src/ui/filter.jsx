@@ -232,65 +232,6 @@ const Filter = () => {
               }
               label={<p>Huawei</p>}
             />
-            <AccordionUsage
-              title={<p>Емкость аккумулятора</p>}
-              body={
-                <form>
-                  <FormControlLabel
-                    control={
-                      <Checkbox
-                        sx={{
-                          color: dark[900],
-                          "&.Mui-checked": {
-                            color: red[500],
-                          },
-                        }}
-                      />
-                    }
-                    label={<p>1821 мА⋅ч</p>}
-                  />
-                  <FormControlLabel
-                    control={
-                      <Checkbox
-                        sx={{
-                          color: dark[900],
-                          "&.Mui-checked": {
-                            color: red[500],
-                          },
-                        }}
-                      />
-                    }
-                    label={<p>3000 мА⋅ч</p>}
-                  />
-                  <FormControlLabel
-                    control={
-                      <Checkbox
-                        sx={{
-                          color: dark[900],
-                          "&.Mui-checked": {
-                            color: red[500],
-                          },
-                        }}
-                      />
-                    }
-                    label={<p>4500 мА⋅ч</p>}
-                  />
-                  <FormControlLabel
-                    control={
-                      <Checkbox
-                        sx={{
-                          color: dark[900],
-                          "&.Mui-checked": {
-                            color: red[500],
-                          },
-                        }}
-                      />
-                    }
-                    label={<p>5000 мА⋅ч</p>}
-                  />
-                </form>
-              }
-            />
           </form>
         }
       />

@@ -980,6 +980,27 @@ $text: #202020;
       }
     }
   }
+
+  .div-filter {
+    width: 100%;
+    .btn-filter {
+      width: 30px;
+      height: 30px;
+      font-size: 20px;
+      background-color: white;
+      border-radius: 5px;
+      border: 1px solid red;
+      color: red;
+      transition: all 1s;
+      &.active {
+        color: white;
+        background-color: red;
+        i {
+          rotate: 360deg;
+        }
+      }
+    }
+  }
   .inputs {
     display: flex;
     width: 100%;
@@ -1487,6 +1508,11 @@ $text: #202020;
     p {
       font-size: 17px;
     }
+    .btn-group{
+      button{
+        font-size: 14px;
+      }
+    }
   }
   .Cheaper-Deals {
     padding: 10px;
@@ -1611,6 +1637,54 @@ $text: #202020;
         height: 50px;
         padding: 10px;
         border-radius: 10px;
+      }
+    }
+  }
+  .ProductFilter {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 10px;
+    h4 {
+      width: 100%;
+      color: grey;
+    }
+    .Filter{
+      width: 100%;
+    }
+    .recomendet {
+      display: flex;
+      padding: 20px;
+      border: none;
+      border-radius: 20px;
+      width: 1020px;
+      max-height: min-content;
+      .ProductCheaperCart{
+        width: 49%;
+      }
+    }
+  }
+  .popular_categories_and_models {
+    width: 100%;
+    padding: 30px 0 30px 0;
+    p {
+      width: 100%;
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      span {
+        color: gray;
+        border: 1px solid $border;
+        padding: 5px;
+        font-size: 16px;
+        border-radius: 50px;
+        &:hover {
+          background-color: rgba(128, 128, 128, 0.469);
+        }
       }
     }
   }

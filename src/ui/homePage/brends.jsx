@@ -12,7 +12,7 @@ const Brends = () => {
     <div className="Brends">
       <div className="texttt" style={{ paddingBottom: "20px" }}>
         <h4>Бренды</h4>
-        <p>
+        <p style={{display:"flex", gap:10}}>
           <a href="#" style={{fontSize:"20px"}}>
             <i style={{width:"40px"}} className="fa-solid fa-arrow-left"></i>
           </a>

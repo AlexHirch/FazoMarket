@@ -7,15 +7,15 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 const OneProduct = () => {
   return (
     <div className="OneProduct">
-      <Swiper 
-      modules={[Navigation, Pagination, Autoplay]}
-      pagination={{ clickable: true }}
-      loop={true}
-      autoplay={{
-        delay: 3000,
-        disableOnInteraction: false,
-      }}
-      navigation={true}
+      <Swiper
+        modules={[Navigation, Pagination, Autoplay]}
+        pagination={{ clickable: true }}
+        loop={true}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        navigation={true}
       >
         <SwiperSlide>
           <div className="d-flex">
@@ -33,7 +33,7 @@ const OneProduct = () => {
             <div className="price">
               <p>1 250 900 Сум</p>
               <span>2 220 900 Сум</span>
-              <Button value={"Показать еще"} color={"btn-white"} />
+              <Button value={"Показать еще"} color={"white"} />
             </div>
           </div>
         </SwiperSlide>
@@ -53,7 +53,7 @@ const OneProduct = () => {
             <div className="price">
               <p>1 250 900 Сум</p>
               <span>2 220 900 Сум</span>
-              <Button value={"Показать еще"} color={"btn-white"} />
+              <Button value={"Показать еще"} color={"white"} />
             </div>
           </div>
         </SwiperSlide>

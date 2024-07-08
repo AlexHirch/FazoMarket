@@ -1,20 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import MyButton from "../../ui/buttons/button";
 import { Notebook } from "../../resource";
 import Navigates from "../../ui/buttons/navigates";
 import { useNavigate } from "react-router-dom";
 import ChiperDeal1 from "../../ui/cd1";
+import SellAs from "../../ui/sellas";
 
 const ProductPath = () => {
-    const navigate = useNavigate();
-
+  const navigate = useNavigate();
+  const [visible, setVisible] = useState(false);
   return (
     <>
-
+      <SellAs visible={visible} setVisible={setVisible} />
       <div className="ProductPath">
-      <Navigates pathh={<span onClick={() => navigate("/filter")} pan>
-          {">Категории-Фильтр"}
-        </span>}/>
+        <Navigates
+          pathh={
+            <span onClick={() => navigate("/filter")} pan>
+              {">Категории-Фильтр"}
+            </span>
+          }
+        />
         <div className="image">
           <span>
             <img src={Notebook} alt="" />
@@ -42,7 +47,7 @@ const ProductPath = () => {
               </div>
             </div>
             <p> VIP скидки для VIP клиентов</p>
-            <div className="end">
+            <div onClick={()=> setVisible(!visible)} className="end">
               <MyButton value={"Купить сейчас"} color={"red"} />
               <MyButton value={"Купить в рассрочку сейчас"} color={"black"} />
             </div>
@@ -135,19 +140,21 @@ const ProductPath = () => {
             <p>
               Доставка:<span>Бесплатно</span>
             </p>
-            <p>
+            <div className="p">
               <span>
                 Cпособ оплаты:
-                <ul>
-                  <li>Наличными (При Доставке)</li>
-                  <li>Payme / Click</li>
-                  <li>Перечислением с НДС</li>
-                </ul>
+                {
+                  <ul>
+                    <li>Наличными (При Доставке)</li>
+                    <li>Payme / Click</li>
+                    <li>Перечислением с НДС</li>
+                  </ul>
+                }
               </span>
-            </p>
+            </div>
           </div>
         </div>
-        <ChiperDeal1/>
+        <ChiperDeal1 />
       </div>
     </>
   );

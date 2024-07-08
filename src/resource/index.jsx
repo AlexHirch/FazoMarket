@@ -17,3 +17,6 @@ export { default as Brand_mi } from "./image/brands/mi.svg";
 export { default as Brand_artel } from "./image/brands/artel.svg";
 export { default as Brand_lg } from "./image/brands/lg.svg";
 export { default as Admin } from "./image/Admin.jpg";
+export {default as MixelLogo} from "./image/mixel.svg"
+export {default as Payment} from "./image/paymart 1.svg"
+export {default as zMarketscard} from "./image/zmarket 1.svg"

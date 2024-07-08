@@ -7,7 +7,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 export default function AccordionUsage({body, title}) {
  return (
     <div>
-      <Accordion style={{border: "none", boxShadow: "none"}}>
+      <Accordion style={{border: "none", boxShadow: "none", width:"100%"}}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls={title}

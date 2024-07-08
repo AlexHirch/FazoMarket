@@ -1,20 +1,16 @@
 import React, { useState } from "react";
 import { Button, Filter, ProductCheaperCart } from "../../ui";
-import { useNavigate } from "react-router-dom";
+import Navigates from "../../ui/buttons/navigates";
+import ChiperDeal1 from "../../ui/cd1";
 
-const ProductFilter = () => {
-  const navigate = useNavigate();
+const ProductFilter = ({navigate}) => {
   const [visible, setVisible] = useState(false)
   const visibleHandle = ()=>{
     setVisible(!visible)
   }
   return (
     <div className="ProductFilter">
-      <h4>
-        <span onClick={() => navigate("/")} pan>
-          Главная
-        </span>
-      </h4>
+      <Navigates navigate={navigate}/>
       <Filter />
       <div className="recomendet">
         <ProductCheaperCart />
@@ -84,19 +80,7 @@ const ProductFilter = () => {
           <span>Игровые</span>
         </p>
       </div>
-      <div className="Cheaper-Deals1">
-        <div className="texttt">
-          <h4>Рекомендуем</h4>
-          <a href="#">
-            Посмотреть все<i className="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
-        <ProductCheaperCart />
-        <ProductCheaperCart />
-        <ProductCheaperCart />
-        <ProductCheaperCart />
-        <ProductCheaperCart />
-      </div>
+      <ChiperDeal1 />
       <div className={visible ? "accordion active" : "accordion"}>
         <h3>Где купить надежный смартфон в Ташкенте?</h3>
         <p>

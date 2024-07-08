@@ -530,6 +530,17 @@ $text: #202020;
       background-color: #fb675d;
     }
   }
+  .btn-black {
+    padding: 10px 30px;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    max-width: 200px;
+    &:hover {
+      background-color: #1c1c1c;
+    }
+  }
   .btn-white {
     padding: 10px 50px;
     background-color: transparent;
@@ -879,6 +890,19 @@ $text: #202020;
       }
     }
   }
+  h4.navigate {
+    width: 100%;
+    color: grey;
+  }
+  
+  .Cheaper-Deals1 {
+    width: 100%;
+    row-gap: 20px;
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
   .ProductFilter {
     width: 100%;
     display: flex;
@@ -886,24 +910,12 @@ $text: #202020;
     justify-content: space-between;
     padding: 20px 50px;
     gap: 10px;
-    h4 {
-      width: 100%;
-      color: grey;
-    }
     .recomendet {
       padding: 20px;
       border: 1px solid $border;
       border-radius: 20px;
       width: 1020px;
       max-height: min-content;
-    }
-    .Cheaper-Deals1 {
-      width: 100%;
-      row-gap: 20px;
-      padding: 20px 0;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
     }
     .accordion {
       position: relative;
@@ -1028,6 +1040,144 @@ $text: #202020;
         border-radius: 50px;
         &:hover {
           background-color: rgba(128, 128, 128, 0.469);
+        }
+      }
+    }
+  }
+  .ProductPath {
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    .image {
+      width: 300px;
+      min-height: 400px;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 5px;
+      justify-content: space-between;
+      height: 400px;
+      img {
+        width: 70px;
+        height: 70px;
+        object-fit: cover;
+        border: 1px solid $border;
+        border-radius: 5px;
+      }
+      span {
+        width: 300px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        img {
+          width: 95%;
+          height: 95%;
+        }
+      }
+    }
+    .description {
+      width: 600px;
+      display: flex;
+      flex-wrap: wrap;
+      .char {
+        width: 550px;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: gray;
+        &:hover {
+          background-color: $border;
+        }
+        span {
+          width: 45%;
+        }
+      }
+      h2 {
+        width: 100%;
+      }
+      .description-btn-group {
+        width: 100%;
+        padding: 10px;
+        p {
+          padding: 20px 0;
+          color: gray;
+          font-size: 14px;
+        }
+
+        .top {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          justify-content: space-between;
+          p {
+            color: black;
+            font-size: 20px;
+            font-weight: 600;
+          }
+          .btn-group {
+            display: flex;
+            justify-content: space-between;
+            width: 200px;
+            height: auto;
+            button {
+              background-color: transparent;
+              font-size: 20px;
+              color: grey;
+              width: 33.3%;
+              padding: 10px;
+              border: none;
+              &:nth-child(2) {
+                border: 1px solid $border;
+                border-bottom: none;
+                border-top: none;
+              }
+              &:hover {
+                color: $color;
+              }
+            }
+          }
+        }
+        .end {
+          width: 100%;
+          display: flex;
+          gap: 10px;
+          .btn-red {
+            max-width: 150px;
+          }
+        }
+      }
+    }
+    .questions {
+      width: 410px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      gap: 20px;
+      div {
+        width: 100%;
+        background-color: rgba(222, 222, 222, 0.562);
+        padding: 30px;
+        border-radius: 15px;
+        p {
+          color: gray;
+          padding: 5px 0;
+          &:first-child {
+            color: $text;
+          }
+          span {
+            color: $text;
+            ul {
+              color: gray;
+              padding: 10px 0 0 20px;
+            }
+          }
+        }
+        a {
+          color: blue;
         }
       }
     }
@@ -1508,8 +1658,8 @@ $text: #202020;
     p {
       font-size: 17px;
     }
-    .btn-group{
-      button{
+    .btn-group {
+      button {
         font-size: 14px;
       }
     }
@@ -1652,7 +1802,7 @@ $text: #202020;
       width: 100%;
       color: grey;
     }
-    .Filter{
+    .Filter {
       width: 100%;
     }
     .recomendet {
@@ -1662,7 +1812,7 @@ $text: #202020;
       border-radius: 20px;
       width: 1020px;
       max-height: min-content;
-      .ProductCheaperCart{
+      .ProductCheaperCart {
         width: 49%;
       }
     }
@@ -1684,6 +1834,71 @@ $text: #202020;
         border-radius: 50px;
         &:hover {
           background-color: rgba(128, 128, 128, 0.469);
+        }
+      }
+    }
+  }
+  .ProductPath {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    .image {
+      width: 100%;
+      height: auto;
+      img {
+        width: 24%;
+        height: auto;
+      }
+      span {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .description {
+      width: 100%;
+      .char {
+        width: 100%;
+        padding: 10px;
+        &:hover {
+          background-color: $border;
+        }
+        span {
+          width: 45%;
+          font-size: 14px;
+        }
+      }
+    }
+    .questions {
+      width: 100%;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      gap: 20px;
+      div {
+        width: 100%;
+        background-color: rgba(222, 222, 222, 0.562);
+        padding: 30px;
+        border-radius: 15px;
+        p {
+          color: gray;
+          padding: 5px 0;
+          &:first-child {
+            color: $text;
+          }
+          span {
+            color: $text;
+            ul {
+              color: gray;
+              padding: 10px 0 0 20px;
+            }
+          }
+        }
+        a {
+          color: blue;
         }
       }
     }

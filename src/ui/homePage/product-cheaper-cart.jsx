@@ -1,9 +1,11 @@
 import React from "react";
 import { Iphone } from "../../resource";
+import { useNavigate } from "react-router-dom";
 
 const ProductCheaperCart = () => {
+  const navigate = useNavigate();
   return (
-    <div className="ProductCheaperCart">
+    <div  onClick={()=>navigate('/description')} className="ProductCheaperCart">
       <div className="img">
         <img src={Iphone} alt="" />
       </div>

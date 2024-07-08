@@ -1,9 +1,12 @@
 import React from "react";
 import { product1 } from "../../resource";
+import { useNavigate } from "react-router-dom";
 
 const ProductMiniCart = () => {
+  const navigate = useNavigate();
+
   return (
-    <div className="ProductMiniCart">
+    <div onClick={()=>navigate('/description')} className="ProductMiniCart">
       <div className="img">
         <img src={product1} alt="" />
       </div>

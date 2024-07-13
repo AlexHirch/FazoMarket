@@ -2505,4 +2505,40 @@ $text: #202020;
       }
     }
   }
+  .purMain {
+    display: flex;
+    padding: 20px 4%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .Purchase {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      .pur1 {
+        width: 100%;
+        .phonenumber {
+          width: 100%;
+          input {
+            width: 100%;
+          }
+          .MuiFormControl-root {
+            width: 100%;
+            padding: auto;
+          }
+        }
+        .name_firstName {
+          width: 100%;
+          flex-wrap: wrap;
+          row-gap: 10px;
+          .MuiFormControl-root {
+            width: 100%;
+            padding: auto;
+          }
+        }
+      }
+    }
+    .your_data {
+      width: 100%;
+    }
+  }
 }

@@ -1,5 +1,5 @@
 $color: #ed3729;
-$border: rgb(219, 219, 219);
+$border: #e2e2e2;
 $text: #202020;
 
 .App {
@@ -894,7 +894,7 @@ $text: #202020;
     width: 100%;
     color: grey;
   }
-  
+
   .Cheaper-Deals1 {
     width: 100%;
     row-gap: 20px;
@@ -1182,17 +1182,17 @@ $text: #202020;
       }
     }
   }
-  .SellAs{
+  .SellAs {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    &.active{
+    &.active {
       top: -200%;
       display: none;
     }
-    .visisi{
+    .visisi {
       width: 80%;
       min-height: 500px;
       top: 10%;
@@ -1204,7 +1204,7 @@ $text: #202020;
       border-radius: 25px;
       box-shadow: 0 0 100px black;
       z-index: 3;
-      .product{
+      .product {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -1212,46 +1212,46 @@ $text: #202020;
         border-radius: 20px;
         padding: 0 20px;
         height: 100px;
-        p{
+        p {
           width: 80%;
           display: flex;
           flex-wrap: wrap;
-          span{
+          span {
             width: 100%;
             color: gray;
           }
-          .span{
+          .span {
             width: 100%;
           }
         }
-        img{
+        img {
           padding: 10px;
           height: 100%;
         }
-        .btn-group{
+        .btn-group {
           display: flex;
           align-items: center;
           justify-content: center;
           gap: 5px;
-          button{
+          button {
             width: 25px;
             height: 25px;
             background-color: transparent;
             border: 1px solid $border;
             color: $color;
             border-radius: 5px;
-            &:nth-child(2){
+            &:nth-child(2) {
               width: 40px;
               height: 30px;
             }
           }
         }
       }
-      .mixel{
+      .mixel {
         width: 100%;
         border-radius: 20px;
         overflow: hidden;
-        .mixelUz{
+        .mixelUz {
           border: 1px solid $border;
           padding: 10px;
           border-radius: 10px;
@@ -1259,28 +1259,28 @@ $text: #202020;
           width: 100%;
           align-items: center;
           justify-content: space-between;
-          h3{
+          h3 {
             width: 40%;
           }
-          img{
+          img {
             width: 300px;
             padding-right: 100px;
           }
-          input{
+          input {
             width: 20px;
             height: 20px;
             accent-color: red;
           }
         }
       }
-      .mixelBody{
+      .mixelBody {
         width: 100%;
         border: 2px solid $border;
         border-radius: 15px;
         display: flex;
         padding: 20px;
         flex-direction: column;
-        .titleCreditCard{
+        .titleCreditCard {
           border: 1px solid $border;
           width: 100%;
           display: flex;
@@ -1288,35 +1288,34 @@ $text: #202020;
           font-size: 14px;
           border-radius: 10px;
         }
-        .credit-cards-usage{
+        .credit-cards-usage {
           width: 100%;
           display: flex;
           flex-wrap: wrap;
           row-gap: 5px;
-          p{
+          p {
             width: 100%;
             padding: 10px;
             border-radius: 10px;
             display: flex;
             justify-content: space-between;
-            span{
+            span {
               width: 49%;
-              &:last-child{
+              &:last-child {
                 color: gray;
               }
             }
-            &:nth-child(1){
+            &:nth-child(1) {
               background-color: $border;
             }
-            &:nth-child(3){
+            &:nth-child(3) {
               background-color: $border;
             }
-
           }
         }
       }
     }
-    .close{
+    .close {
       width: 100%;
       height: 100vh;
       background-color: #00000090;
@@ -1324,6 +1323,340 @@ $text: #202020;
       top: 0;
       left: 0;
       z-index: 1;
+    }
+  }
+  .navigate {
+    padding: 20px 4%;
+  }
+  .purMain {
+    display: flex;
+    padding: 20px 4%;
+    justify-content: space-between;
+    .Purchase {
+      width: 68%;
+      display: flex;
+      flex-wrap: wrap;
+      .pur1 {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        h2 {
+          width: 100%;
+        }
+        p.p {
+          width: 100%;
+          padding: 20px 0;
+          display: flex;
+          align-items: center;
+          font-weight: 700;
+          span {
+            margin-right: 5px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border: 1px solid $border;
+          }
+        }
+        .phonenumber {
+          width: 100%;
+          position: relative;
+          display: flex;
+          gap: 20px;
+          input {
+            width: 50%;
+          }
+          .MuiFormControl-root {
+            width: 48%;
+            padding: auto;
+          }
+          .Mui-focused {
+            color: $color;
+            .MuiOutlinedInput-notchedOutline {
+              border-color: $color !important;
+              border: 1px solid $color;
+            }
+          }
+        }
+        .name_firstName {
+          padding: 30px 0;
+          position: relative;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          .MuiFormControl-root {
+            width: 48%;
+            padding: auto;
+          }
+          .MuiInputLabel-shrink {
+            color: $color;
+          }
+          .Mui-focused {
+            .MuiOutlinedInput-notchedOutline {
+              border-color: $color !important;
+              border: 1px solid $color;
+            }
+          }
+        }
+      }
+      .pur2 {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 5px;
+        p.p {
+          padding: 20px 0;
+          display: flex;
+          width: 150px;
+          align-items: center;
+          font-weight: 700;
+          span {
+            margin-right: 5px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border: 1px solid $border;
+          }
+        }
+        button.btn-edit {
+          padding: 10px;
+          height: min-content;
+          background-color: transparent;
+          border: 1px solid $border;
+          border-radius: 4px;
+        }
+        .product {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border: 1px solid $border;
+          border-radius: 10px;
+          padding: 0 20px 0 0;
+          img {
+            width: 15%;
+          }
+          p {
+            width: 85%;
+            display: flex;
+            justify-content: space-between;
+            color: $text;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            span:last-child {
+              font-weight: 600;
+            }
+          }
+        }
+      }
+      .pur3 {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 5px;
+        p.p {
+          width: 100%;
+          padding: 20px 0;
+          display: flex;
+          align-items: center;
+          font-weight: 700;
+          span {
+            margin-right: 5px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border: 1px solid $border;
+          }
+        }
+        div {
+          display: flex;
+          row-gap: 10px;
+          padding-left: 20px;
+          label {
+            border: 1px solid $border;
+            border-radius: 4px;
+            padding-right: 20px;
+          }
+        }
+      }
+      .pur4 {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 5px;
+        padding-bottom: 20px;
+        p.p {
+          width: 100%;
+          padding: 20px 0;
+          display: flex;
+          align-items: center;
+          font-weight: 700;
+          span {
+            margin-right: 5px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border: 1px solid $border;
+          }
+        }
+        #location {
+          width: 20px;
+          height: 20px;
+          &:checked {
+            position: relative;
+            background-color: red;
+            color: red;
+            accent-color: $color;
+          }
+        }
+
+        p.f {
+          font-size: 14px;
+          color: grey;
+          padding: 10px 0;
+        }
+        select {
+          padding: 5px 10px;
+          font-size: 20px;
+          font-weight: 100;
+          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+          width: 48%;
+          border: 1px solid $border;
+          border-radius: 5px;
+          &:focus {
+            outline: 1px solid red;
+          }
+        }
+        label.Address {
+          position: relative;
+          width: 75%;
+          display: flex;
+          height: 50px;
+          p {
+            position: absolute;
+            top: 10px;
+            background-color: white;
+            color: grey;
+            padding: 0 10px;
+            left: 20px;
+          }
+          input {
+            height: 100%;
+            color: grey;
+            margin-top: 20px;
+            width: 100%;
+            font-size: 18px;
+            outline: none;
+            padding: 10px;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            border-radius: 10px;
+            border: 1px solid $border;
+            &:focus {
+              outline: 1px solid red;
+            }
+          }
+        }
+        label.Floor {
+          position: relative;
+          width: 20%;
+          display: flex;
+          height: 50px;
+          p {
+            position: absolute;
+            top: 10px;
+            background-color: white;
+            color: grey;
+            padding: 0 10px;
+            left: 20px;
+          }
+          input::-webkit-outer-spin-button,
+          input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+          input {
+            height: 100%;
+            color: grey;
+            margin-top: 20px;
+            width: 100%;
+            font-size: 18px;
+            outline: none;
+            padding: 10px;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            border-radius: 10px;
+            border: 1px solid $border;
+            &:focus {
+              outline: 1px solid red;
+            }
+          }
+        }
+        label.date{
+          margin-top: 50px;
+          border: 1px solid $border;
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: start;
+          position: relative;
+          width: 100%;
+          height: 50px;
+          input{
+            width: 100%;
+            padding: 20px;
+            height: 100%;
+            font-size: 20px;
+            border-radius: 5px;
+            color: grey;
+            border: none;
+            outline: none;
+            &:focus{
+              outline: 1px solid red;
+            }
+          }
+        }
+      }
+    }
+    .your_data {
+      width: 28%;
+      padding: 20px 30px 20px 10px;
+      display: flex;
+      flex-direction: column;
+      background-color: rgb(241, 241, 241);
+      border: 2px solid rgb(222, 222, 222);
+      border-radius: 10px;
+      gap: 20px;
+      height: min-content;
+      p{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        font-size: 14px;
+        color: $text;
+        span{
+          font-size: 16px;
+          font-weight: 700;
+        }
+      }
+      a{
+        font-size: 14px;
+      }
     }
   }
 }
@@ -2043,6 +2376,131 @@ $text: #202020;
         }
         a {
           color: blue;
+        }
+      }
+    }
+  }
+  .SellAs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    &.active {
+      top: -200%;
+      display: none;
+    }
+    .visisi {
+      width: 80%;
+      min-height: 500px;
+      top: 10%;
+      left: 10%;
+      position: absolute;
+      background-color: white;
+      padding: 10px;
+      border: 1px solid $border;
+      border-radius: 25px;
+      box-shadow: 0 0 100px black;
+      z-index: 3;
+      .product {
+        height: max-content;
+        flex-wrap: wrap;
+        p {
+          width: 300px;
+          padding-bottom: 10px;
+        }
+        img {
+          height: auto;
+          width: 100px;
+        }
+        .btn-group {
+          width: 100%;
+          padding-bottom: 10px;
+          button {
+            width: 40px;
+            height: 40px;
+            background-color: transparent;
+            border: 1px solid $border;
+            color: $color;
+            font-size: 20px;
+            border-radius: 5px;
+            &:nth-child(2) {
+              width: 60px;
+              font-size: 26px;
+              height: 60px;
+            }
+          }
+        }
+      }
+      .mixel {
+        width: 100%;
+        border-radius: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        .mixelUz {
+          border: 1px solid $border;
+          padding: 5px;
+          border-radius: 10px;
+          display: flex;
+          flex-wrap: wrap;
+          width: 100%;
+          align-items: center;
+          justify-content: space-evenly;
+          h3 {
+            width: 40%;
+          }
+          img {
+            width: 200px;
+            padding-right: 0px;
+            padding: 10px;
+          }
+          input {
+            width: 20px;
+            height: 20px;
+            accent-color: red;
+          }
+        }
+      }
+      .mixelBody {
+        width: 100%;
+        border: 2px solid $border;
+        border-radius: 15px;
+        display: flex;
+        padding: 20px;
+        flex-direction: column;
+        .titleCreditCard {
+          border: 1px solid $border;
+          width: 100%;
+          display: flex;
+          padding: 10px;
+          font-size: 14px;
+          border-radius: 10px;
+        }
+        .credit-cards-usage {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          row-gap: 5px;
+          p {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            span {
+              width: 49%;
+              &:last-child {
+                color: gray;
+              }
+            }
+            &:nth-child(1) {
+              background-color: $border;
+            }
+            &:nth-child(3) {
+              background-color: $border;
+            }
+          }
         }
       }
     }

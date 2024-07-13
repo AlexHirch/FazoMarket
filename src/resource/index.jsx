@@ -19,4 +19,9 @@ export { default as Brand_lg } from "./image/brands/lg.svg";
 export { default as Admin } from "./image/Admin.jpg";
 export {default as MixelLogo} from "./image/mixel.svg"
 export {default as Payment} from "./image/paymart 1.svg"
+export {default as PayMe} from "./image/PayMe.svg"
 export {default as zMarketscard} from "./image/zmarket 1.svg"
+export {default as UzcardHumo} from "./image/UzcardHumo.svg"
+export {default as Cash} from "./image/Cash.svg"
+export {default as Installment} from "./image/Installment.svg"
+export {default as Receipt} from "./image/receipt.svg"

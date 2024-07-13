@@ -554,8 +554,8 @@ const SellAs = ({ visible, setVisible }) => {
           />
 
           <div style={{ display: "flex", gap: 20, justifyContent: "end" }}>
-            <MyButton value={"Продолжить покупки"} color={"white"} />
-            <MyButton value={"Оформить покупку"} color={"red"} />
+            <MyButton navigates={"/"} value={"Продолжить покупки"} color={"white"} />
+            <MyButton navigates={"/purchase"} value={"Оформить покупку"} color={"red"} />
           </div>
         </div>
       </div>

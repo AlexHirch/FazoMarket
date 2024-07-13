@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
   Brends,
   OneProduct,
@@ -6,10 +7,11 @@ import {
   ProductMiniCart,
   Slider,
 } from "../ui";
+import axios from "axios";
 
 const Home = () => {
   return (
-    <div style={{userSelect:"none"}}>
+    <div style={{ userSelect: "none" }}>
       <Slider />
       <div className="Hot-Deals">
         <div className="texttt">
@@ -18,16 +20,16 @@ const Home = () => {
             Посмотреть все<i className="fa-solid fa-arrow-right"></i>
           </a>
         </div>
-        <ProductMiniCart />
-        <ProductMiniCart />
-        <ProductMiniCart />
-        <ProductMiniCart />
-        <ProductMiniCart />
-        <ProductMiniCart />
-        <ProductMiniCart />
-        <ProductMiniCart />
-        <ProductMiniCart />
-        <ProductMiniCart />
+            <ProductMiniCart />
+            <ProductMiniCart />
+            <ProductMiniCart />
+            <ProductMiniCart />
+            <ProductMiniCart />
+            <ProductMiniCart />
+            <ProductMiniCart />
+            <ProductMiniCart />
+            <ProductMiniCart />
+            <ProductMiniCart />
       </div>
       <PopularCategories />
       <OneProduct />
@@ -74,7 +76,7 @@ const Home = () => {
           <ProductCheaperCart />
         </div>
       </div>
-      <Brends/>
+      <Brends />
     </div>
   );
 };

@@ -72,7 +72,7 @@ const Nav = ({ setToggleState }) => {
           </div>
         </div>
         <div className="buttonBox">
-          <button>
+          <button onClick={()=>navigate('/profil')}>
             <i className="fa-regular fa-user"></i>
             <br />
             Войти
@@ -106,7 +106,7 @@ const Nav = ({ setToggleState }) => {
         </button>
         <form>
           <input type="text" placeholder={selectedValue} />
-          <button>
+          <button onClick={(event) => handleSearch(event)}>
             <i className="fa-solid fa-magnifying-glass"></i>
           </button>
           <div className={visible ? "navMenu" : "navMenu active"}>
@@ -119,7 +119,7 @@ const Nav = ({ setToggleState }) => {
                 ></i>
               </span>
               <div className="buttonBox">
-                <button>
+                <button onClick={()=>navigate('/profil')}>
                   <i className="fa-regular fa-user"></i>
                   Войти
                 </button>

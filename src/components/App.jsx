@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { InfoBar } from "../ui";
-import { Navbar, Home, ProductFilter, Footer, ProductPath, Purchase, Search, Likes } from "./";
+import { Navbar, Home, ProductFilter, Footer, ProductPath, Purchase, Search, Likes, Profil } from "./";
 import TabContents from "./path/tabcontents";
 
 const App = () => {
@@ -27,6 +27,7 @@ const App = () => {
           <Route path="/purchase" element={<Purchase />} />
           <Route path="/search" element={<Search />} />
           <Route path="/likes" element={<Likes />} />
+          <Route path="/profil" element={<Profil />} />
         </Routes>
         <Footer />
       </BrowserRouter>

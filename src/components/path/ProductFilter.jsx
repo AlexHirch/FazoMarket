@@ -52,7 +52,7 @@ const ProductFilter = ({navigate}) => {
             alignItems: "center",
           }}
         >
-          <i style={{ color: "gray" }} class="fa-solid fa-chevron-left"></i>
+          <i style={{ color: "gray" }} className="fa-solid fa-chevron-left"></i>
           <Button value={"1"} color={"path active"} />
           <Button value={"2"} color={"path"} />
           <Button value={"3"} color={"path"} />
@@ -60,7 +60,7 @@ const ProductFilter = ({navigate}) => {
           <p style={{ fontSize: 20, color: "gray" }}>...</p>
           <Button value={"28"} color={"path"} />
           <Button value={"29"} color={"path"} />
-          <i style={{ color: "gray" }} class="fa-solid fa-chevron-right"></i>
+          <i style={{ color: "gray" }} className="fa-solid fa-chevron-right"></i>
         </div>
       </div>
       <div

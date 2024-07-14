@@ -1,22 +1,34 @@
 import React, { useState } from "react";
 import { Logo, logo1 } from "../../resource";
+import { useNavigate } from "react-router-dom";
 
-const Nav = () => {
+const Nav = ({ setToggleState }) => {
   const [selectedValue, setSelectedValue] = useState("Все категории");
   const [visible, setVisible] = useState(false);
+  const navigate = useNavigate();
+  const navigatetoss = (i) => {
+    setToggleState(i);
+    navigate("/installment");
+    setVisible(!visible);
+  };
 
-  const visibleButton = ()=>{
-    setVisible(!visible)
-  }
+  const visibleButton = () => {
+    setVisible(!visible);
+  };
 
   const handleSelectChange = (event) => {
     setSelectedValue(event.target.value);
   };
 
+  const handleSearch = (event) => {
+    event.preventDefault();
+    navigate("/search");
+  };
+
   return (
     <>
       <div className="navbar">
-        <div className="FazoLogo">
+        <div onClick={()=>navigate('/')} className="FazoLogo">
           <img src={Logo} alt="Fazo" />
         </div>
         <div className="navSearcr">
@@ -39,10 +51,14 @@ const Nav = () => {
                 </option>
                 <option value="IP Телефония">IP Телефония</option>
               </select>
-              <input type="text" placeholder={selectedValue} />
+              <input
+                onChange={() => handleSearch()}
+                type="text"
+                placeholder={selectedValue}
+              />
               <i className="fa-solid fa-microphone"></i>
             </span>
-            <button>
+            <button onClick={(event) => handleSearch(event)}>
               <i className="fa-solid fa-magnifying-glass"></i> Поиск
             </button>
           </form>
@@ -67,7 +83,10 @@ const Nav = () => {
             <span>12</span>
             Сравнение
           </button>
-          <button>
+          <button onClick={(e)=>{
+            e.preventDefault()
+            navigate("/likes")
+          }}>
             <i className="fa-regular fa-heart"></i>
             <br />
             <span>5</span>
@@ -82,7 +101,7 @@ const Nav = () => {
         </div>
       </div>
       <div className="navMedia">
-        <button onClick={()=>visibleButton()}>
+        <button onClick={() => visibleButton()}>
           <i className="fa-solid fa-bars"></i>
         </button>
         <form>
@@ -90,11 +109,14 @@ const Nav = () => {
           <button>
             <i className="fa-solid fa-magnifying-glass"></i>
           </button>
-          <div className={visible ? "navMenu" : "navMenu active" }>
+          <div className={visible ? "navMenu" : "navMenu active"}>
             <div className="main">
               <span className="close">
                 <img src={logo1} alt="" />
-                <i onClick={()=>visibleButton()} className="fa-solid fa-xmark"></i>
+                <i
+                  onClick={() => visibleButton()}
+                  className="fa-solid fa-xmark"
+                ></i>
               </span>
               <div className="buttonBox">
                 <button>
@@ -106,29 +128,31 @@ const Nav = () => {
               </div>
               <ul>
                 <li>
-                  <a className="active" href="">
+                  <p onClick={() => navigatetoss(7)}>
                     <i className="fa-solid fa-book"></i>Наши магазины
-                  </a>
+                  </p>
                 </li>
                 <li>
-                  <a href="">
+                  <p onClick={() => navigatetoss(9)}>
                     <i className="fa-brands fa-bitcoin"></i>B2B продажи
-                  </a>
+                  </p>
                 </li>
                 <li>
-                  <a href="">
-                    <i className="fa-regular fa-credit-card"></i>Покупка в рассрочку
-                  </a>
+                  <p onClick={() => navigatetoss(1)}>
+                    <i className="fa-regular fa-credit-card"></i>Покупка в
+                    рассрочку
+                  </p>
                 </li>
                 <li>
-                  <a href="">
+                  <p onClick={() => navigatetoss(2)}>
                     <i className="fa-solid fa-wallet"></i>Способы оплаты
-                  </a>
+                  </p>
                 </li>
                 <li>
-                  <a href="">
-                    <i className="fa-solid fa-shield-halved"></i>Гарантия на товары
-                  </a>
+                  <p onClick={() => navigatetoss(3)}>
+                    <i className="fa-solid fa-shield-halved"></i>Гарантия на
+                    товары
+                  </p>
                 </li>
               </ul>
 
@@ -140,7 +164,7 @@ const Nav = () => {
                 <i className="fa-solid fa-phone"></i>+998 95 123 55 88
               </p>
             </div>
-            <span onClick={()=>visibleButton()} className="bhc"></span>
+            <span onClick={() => visibleButton()} className="bhc"></span>
           </div>
         </form>
       </div>

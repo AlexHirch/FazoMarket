@@ -10,7 +10,6 @@ const Filter = () => {
   const [filterOn, setFilterOn] = useState(false);
   const [value, setValue] = React.useState([1, 103000000]);
   const [width1, setWidth1] = useState(window.innerWidth);
-  console.log(width1);
 
   const filterVisibleHanle = () => {
     setFilterOn(!filterOn);

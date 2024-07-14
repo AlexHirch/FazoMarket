@@ -907,15 +907,15 @@ $text: #202020;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 20px 50px;
     gap: 10px;
     .recomendet {
       padding: 20px;
       border: 1px solid $border;
       border-radius: 20px;
-      width: 1020px;
-      max-height: min-content;
+      width: 70%;
+      max-height: min-content;  
     }
     .accordion {
       position: relative;
@@ -970,7 +970,7 @@ $text: #202020;
       min-height: 50vh;
       height: max-content;
       border: 1px solid $border;
-      width: 300px;
+      width: 25%;
       p {
         color: $text;
         span {
@@ -1607,7 +1607,7 @@ $text: #202020;
             }
           }
         }
-        label.date{
+        label.date {
           margin-top: 50px;
           border: 1px solid $border;
           border-radius: 5px;
@@ -1617,7 +1617,7 @@ $text: #202020;
           position: relative;
           width: 100%;
           height: 50px;
-          input{
+          input {
             width: 100%;
             padding: 20px;
             height: 100%;
@@ -1626,7 +1626,7 @@ $text: #202020;
             color: grey;
             border: none;
             outline: none;
-            &:focus{
+            &:focus {
               outline: 1px solid red;
             }
           }
@@ -1643,19 +1643,170 @@ $text: #202020;
       border-radius: 10px;
       gap: 20px;
       height: min-content;
-      p{
+      p {
         display: flex;
         justify-content: space-between;
         width: 100%;
         font-size: 14px;
         color: $text;
-        span{
+        span {
           font-size: 16px;
           font-weight: 700;
         }
       }
-      a{
+      a {
         font-size: 14px;
+      }
+    }
+  }
+  .TabContents {
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 20px 50px;
+    .bloc-tabs {
+      width: 20%;
+      display: flex;
+      flex-wrap: wrap;
+      height: max-content;
+      .tabs {
+        width: 100%;
+        border: 1px solid $border;
+        padding: 20px;
+        gap: 10px;
+        background-color: rgb(243, 243, 243);
+        display: flex;
+        i {
+          color: $color;
+          font-size: 20px;
+        }
+        p {
+          color: $text;
+          display: flex;
+          flex-direction: column;
+          font-size: 18px;
+          span {
+            color: grey;
+            font-size: 14px;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+          }
+        }
+        &.active {
+          background-color: white;
+          border-color: red;
+          border-radius: 5px;
+          margin: 2px;
+          box-shadow: 0 0 5px red;
+        }
+      }
+    }
+    .content-tabs {
+      width: 70%;
+      padding: 20px;
+      height: max-content;
+      .content {
+        width: 100%;
+        height: max-content;
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        p {
+          padding: 10px;
+          color: grey;
+          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+        &.active {
+          display: flex;
+        }
+      }
+    }
+  }
+  .Saerch{
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .Likes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 20px;
+    padding-bottom: 20px;
+  }
+  .LikesProduct{
+    width: 19%;
+    height: max-content;
+    border: 1px solid $border;
+    border-radius: 10px;
+    position: relative;
+    .btn-xmark{
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      display: flex;
+      right: 10px;
+      top: 10px;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid $border;
+      border-radius: 20px;
+      font-size: 20px;
+      color: gray;
+    }
+    .img {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+      img {
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    p {
+      text-align: center;
+      width: 100%;
+      font-size: 20px;
+      padding: 10px 20px;
+      color: $color;
+      font-weight: 700;
+      span {
+        padding: 0;
+        font-weight: 400;
+        font-size: 12px;
+        color: grey;
+      }
+    }
+    h3 {
+      width: 100%;
+      text-align: center;
+      padding: 0 20px 20px 20px;
+      font-size: 14px;
+    }
+    .btn-group {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height: auto;
+      button {
+        background-color: transparent;
+        border: 1px solid $border;
+        font-size: 20px;
+        color: grey;
+        width: 50%;
+        padding: 20px;
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+        &:nth-child(2) {
+          border: 1px solid $border;
+          border-bottom: none;
+        }
+        &:hover {
+          color: $color;
+        }
       }
     }
   }
@@ -1927,12 +2078,13 @@ $text: #202020;
           }
         }
         ul {
-          padding: 20px;
+          padding: 0px;
           li {
-            padding: 15px 10px;
-            font-size: 22px;
-            a {
+            padding: 0px;
+            font-size: 24px;
+            p {
               color: #202020;
+              font-size: 24px;
             }
             i {
               text-align: center;
@@ -2539,6 +2691,44 @@ $text: #202020;
     }
     .your_data {
       width: 100%;
+    }
+  }
+  .TabContents {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    .bloc-tabs {
+      width: 100%;
+      flex-wrap: nowrap;
+      .tabs {
+        width: 100%;
+        padding: 5px;
+        gap: 0px;
+        p {
+          display: none;
+        }
+        &.active {
+          border-radius: 5px;
+          margin: 0 5px;
+          box-shadow: 0 0 5px red;
+        }
+      }
+    }
+    .content-tabs {
+      width: 100%;
+      padding: 10px 0;
+      .content {
+        gap: 10px;
+        h2 {
+          font-size: 16px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
     }
   }
 }

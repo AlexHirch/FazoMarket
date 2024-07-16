@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 const Nav = ({ setToggleState }) => {
   const [selectedValue, setSelectedValue] = useState("Все категории");
   const [visible, setVisible] = useState(false);
+  const [language, setLanguage] = useState("rus");
   const navigate = useNavigate();
   const navigatetoss = (i) => {
     setToggleState(i);
@@ -25,10 +26,15 @@ const Nav = ({ setToggleState }) => {
     navigate("/search");
   };
 
+  const handleLanguage =(e, item) =>{
+    e.preventDefault()
+    setLanguage(item)
+  }
+
   return (
     <>
       <div className="navbar">
-        <div onClick={()=>navigate('/')} className="FazoLogo">
+        <div onClick={() => navigate("/")} className="FazoLogo">
           <img src={Logo} alt="Fazo" />
         </div>
         <div className="navSearcr">
@@ -72,7 +78,7 @@ const Nav = ({ setToggleState }) => {
           </div>
         </div>
         <div className="buttonBox">
-          <button onClick={()=>navigate('/profil')}>
+          <button onClick={() => navigate("/profil")}>
             <i className="fa-regular fa-user"></i>
             <br />
             Войти
@@ -83,10 +89,12 @@ const Nav = ({ setToggleState }) => {
             <span>12</span>
             Сравнение
           </button>
-          <button onClick={(e)=>{
-            e.preventDefault()
-            navigate("/likes")
-          }}>
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              navigate("/likes");
+            }}
+          >
             <i className="fa-regular fa-heart"></i>
             <br />
             <span>5</span>
@@ -119,12 +127,26 @@ const Nav = ({ setToggleState }) => {
                 ></i>
               </span>
               <div className="buttonBox">
-                <button onClick={()=>navigate('/profil')}>
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/profil");
+                    visibleButton()
+                  }}
+                >
                   <i className="fa-regular fa-user"></i>
                   Войти
                 </button>
                 <hr />
-                <button>Регистрация</button>
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/profil");
+                    visibleButton()
+                  }}
+                >
+                  Регистрация
+                </button>
               </div>
               <ul>
                 <li>
@@ -157,8 +179,8 @@ const Nav = ({ setToggleState }) => {
               </ul>
 
               <div className="language">
-                <button className="active">Рус</button>
-                <button>Узб</button>
+                <button onClick={(e)=>handleLanguage(e, "rus")} className={language === "rus" ? "active" : ""}>Рус</button>
+                <button onClick={(e)=>handleLanguage(e, "eng")} className={language === "eng" ? "active" : ""}>Узб</button>
               </div>
               <p>
                 <i className="fa-solid fa-phone"></i>+998 95 123 55 88

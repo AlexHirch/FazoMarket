@@ -8,7 +8,7 @@ const SellAs = ({ visible, setVisible }) => {
   const [count, setCount] = useState(1);
   return (
     <div className={visible ? "SellAs" : "SellAs active"}>
-      <div onClick={()=> setVisible(!visible)} className="close"></div>
+      <div onClick={()=> setVisible(!visible)} className={visible ? "close" : "close active"}></div>
       <div className="visisi">
         <h3>Купить в рассрочку</h3>
         <div className="product">

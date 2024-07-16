@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Button } from "..";
 import { A892 } from "../../resource";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const OneProduct = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
-    <div className="OneProduct">
+    <div
+      data-aos="fade-up"
+      data-aos-offset="200"
+      data-aos-duration="500"
+      data-aos-easing="ease-in-sine"
+      className="OneProduct"
+    >
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         pagination={{ clickable: true }}

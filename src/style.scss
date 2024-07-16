@@ -5,6 +5,7 @@ $text: #202020;
 .App {
   min-height: 100vh;
   position: relative;
+  overflow-x: hidden;
 }
 
 * {
@@ -265,6 +266,8 @@ $text: #202020;
     user-select: none;
   }
   .slider {
+    position: relative;
+    z-index: 1;
     user-select: none;
   }
 
@@ -1188,9 +1191,10 @@ $text: #202020;
     left: 0;
     width: 100%;
     height: 100vh;
+    transition: all .5s;
     &.active {
       top: -200%;
-      display: none;
+      display: block;
     }
     .visisi {
       width: 80%;
@@ -1323,6 +1327,9 @@ $text: #202020;
       top: 0;
       left: 0;
       z-index: 1;
+      &.active{
+        display: none;
+      }
     }
   }
   .navigate {
@@ -1660,6 +1667,7 @@ $text: #202020;
     }
   }
   .TabContents {
+
     width: 100%;
     height: auto;
     display: flex;
@@ -1733,7 +1741,7 @@ $text: #202020;
     flex-wrap: wrap;
     justify-content: space-evenly;
     row-gap: 20px;
-    padding-bottom: 20px;
+    padding: 30px 4%;
   }
   .LikesProduct {
     width: 19%;
@@ -1812,6 +1820,8 @@ $text: #202020;
   }
   .Profil {
     display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
     padding: 20px 4%;
     justify-content: space-between;
     .pro-1 {
@@ -2459,6 +2469,11 @@ $text: #202020;
   }
   .popularCategories {
     padding: 10px;
+    .r1{
+      img{
+        height: 200px;
+      }
+    }
   }
   .ProductMiniCart {
     width: 48%;

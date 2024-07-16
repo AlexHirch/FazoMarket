@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import MyButton from "../../ui/buttons/button";
 import { Notebook } from "../../resource";
 import Navigates from "../../ui/buttons/navigates";
@@ -9,8 +9,11 @@ import SellAs from "../../ui/sellas";
 const ProductPath = () => {
   const navigate = useNavigate();
   const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
   return (
-    <>
+    <div>
       <SellAs visible={visible} setVisible={setVisible} />
       <div className="ProductPath">
         <Navigates
@@ -47,7 +50,7 @@ const ProductPath = () => {
               </div>
             </div>
             <p> VIP скидки для VIP клиентов</p>
-            <div onClick={()=> setVisible(!visible)} className="end">
+            <div onClick={() => setVisible(!visible)} className="end">
               <MyButton value={"Купить сейчас"} color={"red"} />
               <MyButton value={"Купить в рассрочку сейчас"} color={"black"} />
             </div>
@@ -156,7 +159,7 @@ const ProductPath = () => {
         </div>
         <ChiperDeal1 />
       </div>
-    </>
+    </div>
   );
 };
 

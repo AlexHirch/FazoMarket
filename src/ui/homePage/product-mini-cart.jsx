@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { product1 } from "../../resource";
 import { useNavigate } from "react-router-dom";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const ProductMiniCart = () => {
   const navigate = useNavigate();
-
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
-    <div onClick={()=>navigate('/description')} className="ProductMiniCart">
+    <div
+      data-aos="fade-up"
+      data-aos-offset="200"
+      data-aos-duration="500"
+      data-aos-easing="ease-in-sine"
+      onClick={() => navigate("/description")}
+      className="ProductMiniCart"
+    >
       <div className="img">
         <img src={product1} alt="" />
       </div>

@@ -1,10 +1,23 @@
-import React from 'react'
-import { Iphone } from '../resource'
+import React, { useEffect } from "react";
+import { Iphone } from "../resource";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const LikesProduct = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
-    <div className="LikesProduct">
-        <div className="btn-xmark"><i className="fa-solid fa-xmark"></i></div>
+    <div
+      data-aos="flip-left"
+      data-aos-offset="100"
+      data-aos-duration="600"
+      data-aos-easing="ease-in-sine"
+      className="LikesProduct"
+    >
+      <div className="btn-xmark">
+        <i className="fa-solid fa-xmark"></i>
+      </div>
       <div className="img">
         <img src={Iphone} alt="" />
       </div>
@@ -22,7 +35,7 @@ const LikesProduct = () => {
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default LikesProduct
+export default LikesProduct;

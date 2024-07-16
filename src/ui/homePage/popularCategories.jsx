@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { A11y, Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Camera, Computer, Notebook, Phones } from "../../resource";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 const PopularCategories = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
-    <div className="popularCategories">
+    <div
+      data-aos="fade-up"
+      data-aos-offset="200"
+      data-aos-duration="500"
+      data-aos-easing="ease-in-sine"
+      className="popularCategories"
+    >
       <h3 className="hotCategories">Популярные категории</h3>
       <div className="slider1">
         <Swiper

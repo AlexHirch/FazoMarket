@@ -1,9 +1,18 @@
 import { Switch, TextField } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Profil = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
-    <div className="Profil">
+    <div 
+        data-aos="zoom-in"
+        data-aos-offset="200"
+        data-aos-duration="500"
+        data-aos-easing="ease-in-sine" className="Profil">
       <div className="pro-1">
         <p>
           <i className="fa-regular fa-user"></i>

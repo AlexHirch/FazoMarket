@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import {
   Brends,
   OneProduct,
@@ -7,11 +7,21 @@ import {
   ProductMiniCart,
   Slider,
 } from "../ui";
-import axios from "axios";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Home = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
-    <div style={{ userSelect: "none" }}>
+    <div
+      data-aos="fade-down"
+      data-aos-offset="200"
+      data-aos-duration="800"
+      data-aos-easing="ease-in-sine"
+      style={{ userSelect: "none" }}
+    >
       <Slider />
       <div className="Hot-Deals">
         <div className="texttt">
@@ -20,16 +30,16 @@ const Home = () => {
             Посмотреть все<i className="fa-solid fa-arrow-right"></i>
           </a>
         </div>
-            <ProductMiniCart />
-            <ProductMiniCart />
-            <ProductMiniCart />
-            <ProductMiniCart />
-            <ProductMiniCart />
-            <ProductMiniCart />
-            <ProductMiniCart />
-            <ProductMiniCart />
-            <ProductMiniCart />
-            <ProductMiniCart />
+        <ProductMiniCart />
+        <ProductMiniCart />
+        <ProductMiniCart />
+        <ProductMiniCart />
+        <ProductMiniCart />
+        <ProductMiniCart />
+        <ProductMiniCart />
+        <ProductMiniCart />
+        <ProductMiniCart />
+        <ProductMiniCart />
       </div>
       <PopularCategories />
       <OneProduct />

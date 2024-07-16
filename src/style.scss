@@ -2777,10 +2777,10 @@ $text: #202020;
       display: none;
     }
     .visisi {
-      width: 80%;
+      width: 90%;
       min-height: 500px;
       top: 10%;
-      left: 10%;
+      left: 5%;
       position: absolute;
       background-color: white;
       padding: 10px;
@@ -2834,16 +2834,16 @@ $text: #202020;
           align-items: center;
           justify-content: space-evenly;
           h3 {
-            width: 40%;
+            width: 100%;
           }
           img {
-            width: 200px;
+            width: 100px;
             padding-right: 0px;
             padding: 10px;
           }
           input {
-            width: 20px;
-            height: 20px;
+            width: 15px;
+            height: 15px;
             accent-color: red;
           }
         }
@@ -2889,6 +2889,14 @@ $text: #202020;
           }
         }
       }
+    }
+    .btn-white{
+      width: 45%;
+      padding: 10px;
+    }
+    .btn-red{
+      width: 45%;
+      padding: 10px;
     }
   }
   .purMain {
@@ -2963,6 +2971,118 @@ $text: #202020;
           font-size: 14px;
         }
       }
+    }
+  }
+  .Profil {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    padding: 20px 4%;
+    justify-content: space-between;
+    .pro-1 {
+      width: 100%;
+    }
+    .pro-2 {
+      width: 100%;
+      display: grid;
+      gap: 10px;
+      .Personal {
+        border-radius: 10px;
+        border: 1px solid $border;
+        display: grid;
+        width: 100%;
+        height: 200px;
+        .per-1 {
+          i {
+            width: 30px;
+            height: 30px;
+            font-size: 15px;
+          }
+          p{
+            padding-right: 0px;
+            font-size: 14px;
+          }
+        }
+        .per-2{
+          padding: 20px;
+          display: grid;
+          gap: 20px;
+          p{
+            font-weight: 600;
+            font-size: 18px;
+            &:last-child{
+              font-size: 14px;
+              font-weight: 400;
+              color: grey;
+            }
+          }
+        }
+      }
+      .myCart{
+        .per-1 {
+          i {
+            width: 30px;
+            height: 30px;
+            font-size: 15px;
+          }
+          p{
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    .pro-3 {
+      width: 100%;
+      .notification{
+        width: 100%;
+        padding: 10px;
+        i {
+          width: 30px;
+          height: 30px;
+          font-size: 15px;
+        }
+        p{
+          padding-right: 0px;
+        }
+      }
+      .adress_dostavki{
+        width: 100%;
+        .per-1 {
+          padding: 10px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 1px solid $border;
+          i {
+            width: 30px;
+            height: 30px;
+            font-size: 15px;
+          }
+          p{
+            padding-right: 0px;
+            font-size: 14px;
+          }
+        }
+        .input-group{
+          padding: 10px;
+          label.deffadres{
+            font-size: 16px;
+            input{
+              width: 15px;
+              height: 15px;
+            }
+          }
+          .btn-group{
+            display: flex;
+            gap: 10px;
+          }
+        }
+      }
+    }
+  }
+  .texttt{
+    h4{
+      font-size: 18px;
     }
   }
 }
